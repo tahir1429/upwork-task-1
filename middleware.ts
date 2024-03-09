@@ -7,7 +7,7 @@ export default authMiddleware({
   publicRoutes: ['/', '/sign-in'],
   // Routes that can always be accessed, and have
   // no authentication information
-  ignoredRoutes: ['/no-auth-in-this-route', '/api/test', '/api/user'],
+  ignoredRoutes: ['/no-auth-in-this-route', '/api/user'],
 
   afterAuth(auth, req, evt) {
     // handle users who aren't authenticated
