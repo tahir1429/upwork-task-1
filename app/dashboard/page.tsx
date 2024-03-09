@@ -99,7 +99,7 @@ export default function DashboardPage() {
                     </tr>
                   ) :
                   (agents.map((_:any)=>
-                    <tr className="bg-white border-b light:bg-light-800 light:border-light-700 text-black">
+                    <tr key={_._id} className="bg-white border-b light:bg-light-800 light:border-light-700 text-black">
                       <td  className="px-6 py-4">{_.name}</td>
                       <td  className="px-6 py-4">{_.phone}</td>
                       <td  className="px-6 py-4">{_.availability}</td>

@@ -13,11 +13,7 @@ export default function DashboardPage() {
   const [errors, setErrors] : any = useState({}); 
 
   useEffect(() => { 
-    validateForm(); 
-  }, [name, instructions, phone, availability]); 
-  // Validate form 
-  const validateForm = () => { 
-      let errors: any = {}; 
+    let errors: any = {}; 
 
       if (!name) { 
           errors.name = 'Name is required.'; 
@@ -37,7 +33,8 @@ export default function DashboardPage() {
 
       setErrors(errors); 
       setIsFormValid(Object.keys(errors).length === 0); 
-  }; 
+  }, [name, instructions, phone, availability]); 
+
   // Submit 
   const handleSubmit = async () => { 
     setIsFormFormSubmitted(true);

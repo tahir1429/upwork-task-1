@@ -17,11 +17,6 @@ export default function EditAgentPage({ params }: { params: { agentId: string } 
 
 
     useEffect(() => { 
-        validateForm(); 
-      }, [name, instructions, phone, availability]); 
-      
-    // Validate form 
-    const validateForm = () => { 
         let errors: any = {}; 
   
         if (!name) { 
@@ -42,7 +37,7 @@ export default function EditAgentPage({ params }: { params: { agentId: string } 
   
         setErrors(errors); 
         setIsFormValid(Object.keys(errors).length === 0); 
-    }; 
+      }, [name, instructions, phone, availability]); 
 
     // Submit 
     const handleSubmit = async () => { 
