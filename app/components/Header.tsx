@@ -23,7 +23,7 @@ export default function Header() {
       </Link>
       <div className="grow" />
       <SignedIn>
-        <Link href={"/dashboard"} className="text-black me-5">Go to Dashboard</Link>
+        <Link href={"/dashboard"} className="text-black me-5">Dashboard</Link>
         <UserButton
           afterSignOutUrl="/"
           appearance={{
@@ -38,10 +38,12 @@ export default function Header() {
         />
       </SignedIn>
 
+      
       <SignedOut>
-        <SignInButton mode='modal' afterSignInUrl="/dashboard">
+        <Link className="button" href="/sign-in">Sign In</Link>
+        {/* <SignInButton mode='modal' afterSignInUrl="/dashboard">
             <button className="bg-black p-2 rounded">Sign in with Clerk</button>
-        </SignInButton>
+        </SignInButton> */}
       </SignedOut>
     </header>
   );
