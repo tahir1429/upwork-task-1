@@ -23,6 +23,7 @@ export default function Header() {
       </Link>
       <div className="grow" />
       <SignedIn>
+        <Link href={"/dashboard"} className="text-black me-5">Go to Dashboard</Link>
         <UserButton
           afterSignOutUrl="/"
           appearance={{
