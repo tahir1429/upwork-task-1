@@ -1,8 +1,17 @@
 import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import Header from "../components/Header";
-export default function DashboardPage() {
+export default async function DashboardPage() {
   // const { user } = useUser();
+
+  // const response = await fetch("http://localhost:3000/api/test", {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
+
+  // console.log(response.status);
 
   return (
     <div className="h-screen bg-white">
