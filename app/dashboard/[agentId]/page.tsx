@@ -105,7 +105,8 @@ export default function EditAgentPage({ params }: { params: { agentId: string } 
     useEffect(() => {
         getAgent(params.agentId);
            //return ( /* Call to clean up after app unmounted*/);
-    })
+    }, [params.agentId])
+    //getAgent(params.agentId);
     
 
     return (

@@ -119,7 +119,7 @@ export default function DashboardPage() {
                   className="button w-full mt-3" 
                   type="button" 
                   onClick={handleSubmit}>
-                    Send message
+                    Create Agent
                 </button>
               </div>
             </div>
